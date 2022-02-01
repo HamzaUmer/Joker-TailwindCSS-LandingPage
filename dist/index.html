@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/logo.e14e47d7.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Square Bracket Notations</title>
+    <link rel="stylesheet" href="/assets/index.4d28c70b.css">
+  </head>
+  <body x-data="{navbarOpen : false }">
+    <header
+      class="fixed items-center w-full bg-green-800 h-16 flex justify-between sm:px-14 md:px-12 xsm:overflow-hidden md:overflow-x-hidden z-[999]"
+    >
+      <a href="/">
+        <img
+          src="/assets/logo.e14e47d7.png"
+          class="w-30 h-16 px-20 cursor-pointer md:overflow-x-hidden"
+          alt=""
+          srcset=""
+        />
+      </a>
+      <nav>
+        <button class="md:hidden" @click="navbarOpen= !navbarOpen">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10 text-white xsm:mx-14"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <ul
+          class="fixed mt-2 left-0 right-0 min-h-screen text-white font-bold text-4xl bg-green-800 font-mono space-y-8 px-72 py-20 text-center transition duration-500 transform translate-x-full xsm:px-36 md:relative md:flex md:min-h-0 md:space-y-0 md:space-x-20 md:px-24 md:p-0 md:translate-x-0 md:text-2xl xsm:overflow-hidden md:overflow-x-hidden"
+          :class="{'translate-x-full': !navbarOpen, 'translate-x-0':navbarOpen}"
+        >
+          <li>
+            <a
+              href="/"
+              class="cursor-pointer duration-700 hover:text-purple-900"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#About"
+              class="cursor-pointer duration-700 hover:text-purple-900"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Friends"
+              class="cursor-pointer duration-700 hover:text-purple-900"
+            >
+              Friends&Rivals
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Quotes"
+              class="cursor-pointer duration-700 hover:text-purple-900"
+            >
+              Quotes
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--Hero-Section-->
+    <main
+      class="md:w-full h-screen flex justify-around sm:w-screen sm:h-screen xsm:w-full xsm:overflow-hidden md:overflow-x-hidden"
+      style="background-image: url('img/bg.jpg')"
+    >
+      <div
+        class="md:my-60 sm:my-[2rem] smd:my-[2rem] xsm:my-60 justify-between"
+      >
+        <img
+          class="sm:w-full justify-between pl-9 md:w-[35rem] md:-mx-[35rem] h-48 sm:items-center sm:justify-center sm:mt-20 sm:-mx-[1.8rem]"
+          src="/assets/Text.8784f20e.png"
+          alt=""
+        />
+        <div class="my-4 mx-20 sm:mx-32">
+          <a href="#About"
+            ><button
+              class="bg-green-600 px-10 py-4 rounded-2xl text-white duration-1000 hover:text-purple-800 hover:bg-red-600 hover:border-4 hover:border-purple-800 sm:mx-auto text-2xl font-bold font-mono xsm:mx-20 xsm:mb-4"
+            >
+              About
+            </button>
+          </a>
+          <a href="#gallery">
+            <button
+              class="bg-green-600 px-10 py-4 rounded-2xl text-white duration-1000 hover:text-red-600 hover:bg-purple-800 hover:border-4 hover:border-red-600 sm:mx-auto text-2xl font-bold font-mono xsm:mx-[4.3rem]"
+            >
+              Gallery
+            </button>
+          </a>
+        </div>
+      </div>
+    </main>
+    <!--About Joker-->
+    <div
+      class="bg-purple-700 md:h-[36rem] xsm:h-[55rem] smd:h-[45rem] sm:h-[44rem]"
+      id="About"
+    >
+      <h1
+        class="text-white text-5xl font-mono font-bold py-20 text-center items-center justify-center underline underline-offset-auto"
+      >
+        About Joker
+      </h1>
+      <p
+        class="text-white text-2xl font-mono text-center items-center justify-center align-middle"
+      >
+        Forever alone in a crowd, failed comedian Arthur Fleck seeks connection
+        as he walks the streets of Gotham City. Arthur wears two masks -- the
+        one he paints for his day job as a clown, and the guise he projects in a
+        futile attempt to feel like he's part of the world around him. Isolated,
+        bullied and disregarded by society, Fleck begins a slow descent into
+        madness as he transforms into the criminal mastermind known as the
+        Joker.
+      </p>
+      <img
+        src="/assets/Why.25798b2b.png"
+        alt=""
+        class="item-center justify-center mx-auto w-40 h-40"
+      />
+    </div>
+    <!--Card Section-->
+    <div
+      class="bg-orange-700 xsm:h-[96rem] sm:h-[115rem] smd:h-[40rem] md:h-[45rem]"
+      id="Friends"
+    >
+      <h1
+        class="text-white font-mono font-bold py-20 text-center items-center justify-center underline underline-offset-auto xsm:text-3xl sm:text-3xl md:text-5xl"
+      >
+        Love, Friends & Rivals
+      </h1>
+      <div
+        class="xsm:px-10 xsm:space-y-5 sm:px-20 sm:w-full sm:space-y-4 smd:flex smd:space-x-4 smd:object-cover smd:px-6 smd:h-[23rem] md:flex md:px-[12rem] md:space-x-20 md:items-center md:justify-center md:w-full"
+      >
+        <!--Card1-->
+        <div
+          class="card-l bg-gray-800 rounded-lg overflow-hidden shadow-md flex-1 cursor-pointer transition duration-500 hover:transform hover:-translate-y-2"
+        >
+          <img
+            src="https://www.teahub.io/photos/full/12-124443_harley-quinn-animada.jpg"
+            alt=""
+            class="w-96 sm:w-[31rem] smd:h-72 md:h-80"
+          />
+          <div class="bg-gray-800 text-center">
+            <span class="text-white text-3xl font-bold font-mono"
+              >Harley Quinn</span
+            >
+          </div>
+          <div class="bg-gray-800 flex text-center justify-center items-center">
+            <span class="text-white text-2xl font-mono">Love </span>
+            <img src="/assets/heart.bc0861ee.png" class="h-5 w-5" alt="" />
+          </div>
+        </div>
+        <!--Card2-->
+        <div
+          class="card-l bg-gray-800 rounded-lg overflow-hidden shadow-md flex-1 cursor-pointer transition duration-500 hover:transform hover:-translate-y-2"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQao82tfWx-1SmUpp801BWjZWlrkQ4n_2e3-6vnCNgHkMSk8hNcziLuLiI8vExmSQxvSI8&usqp=CAU"
+            alt=""
+            class="w-96 sm:w-[31rem] smd:h-72 md:h-80"
+          />
+          <div class="bg-gray-800 text-center">
+            <span class="text-white text-3xl font-bold font-mono"
+              >Scarecrow</span
+            >
+          </div>
+          <div class="bg-gray-800 flex text-center justify-center items-center">
+            <span class="text-white text-2xl font-mono">Friend </span>
+            <img src="/assets/frnd.e71ccea0.png" class="h-5 w-5" alt="" />
+          </div>
+        </div>
+        <!--Card3-->
+        <div
+          class="card-l bg-gray-800 rounded-lg overflow-hidden shadow-md flex-1 cursor-pointer transition duration-500 hover:transform hover:-translate-y-2"
+        >
+          <img
+            src="https://besthqwallpapers.com/Uploads/2-3-2021/158325/thumb2-batman-3d-art-superheroes-darkness-black-backgrounds.jpg"
+            alt=""
+            class="w-96 xsm:h-[22rem] sm:h-[22.7rem] sm:w-[31rem] smd:h-72 md:h-80"
+          />
+          <div class="bg-gray-800 text-center">
+            <span class="text-white text-3xl font-bold font-mono">Batman</span>
+          </div>
+          <div class="bg-gray-800 flex text-center justify-center items-center">
+            <span class="text-white text-2xl font-mono">Rival </span>
+            <img
+              src="https://cdn.iconscout.com/icon/premium/png-64-thumb/enemies-2127222-1792504.png"
+              class="h-5 w-5"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Video Section-->
+    <div id="gallery">
+      <video
+        src="/assets/video.a9370cb9.mp4"
+        loop
+        autoplay
+        class="w-full opacity-100"
+      ></video>
+    </div>
+    <!--Quote Section-->
+    <div
+      class="bg-purple-900 py-16 xsm:h-[34rem] sm:h-[28rem] smd:h-[30rem] md:h-[42rem]"
+      id="Quotes"
+    >
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img
+            src="https://sf.ezoiccdn.com/ezoimgfmt/quotesandhacks.com/wp-content/uploads/2019/10/20191025133945.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-2"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://media.hitfull.com/article/images/e3fae4611fd971a00085fed6b07a7d66.jpg"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://media.nojoto.com/content/media/1111659/2019/11/feed/60c61aed8278851671ac3a9600f7fd41/60c61aed8278851671ac3a9600f7fd41_default.jpg"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://1.bp.blogspot.com/-029hav4SRGY/Xc_b38P_4AI/AAAAAAAAAYw/9b9ya33buc07EL6PE_QGCPddj6FIsV9MACEwYBhgL/s1600/joker%2Bquotes%2Bon%2Blife.jpg"
+            alt=""
+            class="md:h-[34.5rem] xsm:h-[26rem] sm:h-[19.8rem] smd:h-[22.7rem]"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://www.scrolldroll.com/wp-content/uploads/2020/02/Best-Quotes-The-Joker-2019-3.jpg"
+            alt=""
+            class="md:h-[34.5rem] xsm:h-[26rem] sm:h-[19.8rem] smd:h-[22.7rem]"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://www.ohbestquotes.com/wp-content/uploads/2021/02/joker-quotes-2.jpg"
+            alt=""
+            class="md:h-[34.5rem] xsm:h-[26rem] sm:h-[19.8rem] smd:h-[22.7rem]"
+          />
+        </div>
+      </div>
+    </div>
+    <footer class="bg-green-800 py-4">
+      <a href="/"
+        ><img
+          src="/assets/j.1d822001.png"
+          alt=""
+          class="w-20 h-20 mx-auto transition ease-in-out duration-200 hover:transform hover:-translate-y-1"
+      /></a>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/owl.js"></script>
+  </body>
+</html>
